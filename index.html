@@ -496,7 +496,7 @@
           <!-- ✏️ EDIT: Ganti src dengan path foto profilmu -->
           <!-- Contoh: src="images/foto-profil.jpg" -->
           <!-- Upload foto ke folder images/ di GitHub repo -->
-          <img src="images/foto-profil" alt="Sandra Nurdiansyah — Marketing Engineer" loading="eager" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <img src="foto-profil" alt="Sandra Nurdiansyah — Marketing Engineer" loading="eager" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
 
           <!-- Cert badge overlay -->
           <div class="cert-badge">
@@ -542,6 +542,7 @@
       <button class="f-tab active" data-filter="all">Semua</button>
       <button class="f-tab" data-filter="Video Editing">Video Editing</button>
       <button class="f-tab" data-filter="Desain Grafis">Desain Grafis</button>
+      <button class="f-tab" data-filter="Marketing Kit">Marketing Kit</button>
       <button class="f-tab" data-filter="Landing Page">Landing Page</button>
       <button class="f-tab" data-filter="Web Design">Web Design</button>
     </div>
@@ -641,7 +642,7 @@
       <!-- ══ WEB DESIGN 1: widyaherma.com ══ -->
       <div class="p-card reveal" data-cat="Web Design">
         <div class="p-thumb">
-          <img src="images/mockup-widyaherma.png" alt="widyaherma.com – Website Personal Brand Digital Advertiser" loading="lazy">
+          <img src="mockup-widyaherma.png" alt="widyaherma.com – Website Personal Brand Digital Advertiser" loading="lazy">
           <div class="p-overlay">
             <a href="https://widyaherma.com" class="p-overlay-btn" target="_blank">Lihat Website</a>
           </div>
@@ -656,7 +657,7 @@
       <!-- ══ LANDING PAGE 1: trillionmillion-bp.com ══ -->
       <div class="p-card reveal" data-cat="Landing Page">
         <div class="p-thumb">
-          <img src="images/mockup-bp.png" alt="trillionmillion-bp.com – Landing Page British Propolis" loading="lazy">
+          <img src="mockup-bp.png" alt="trillionmillion-bp.com – Landing Page British Propolis" loading="lazy">
           <div class="p-overlay">
             <a href="https://trillionmillion-bp.com" class="p-overlay-btn" target="_blank">Lihat Landing Page</a>
           </div>
@@ -669,15 +670,15 @@
       </div>
 
       <!-- ══ DESAIN GRAFIS 1: RSU Bina Sehat Visual Guideline ══ -->
-      <div class="p-card reveal" data-cat="Desain Grafis">
+      <div class="p-card reveal" data-cat="Marketing Kit">
         <div class="p-thumb">
-          <img src="images/desain-rsu-binasehat.png" alt="RSU Bina Sehat – Marketing Kit" loading="lazy">
+          <img src="desain-rsu-binasehat.png" alt="RSU Bina Sehat – Marketing Kit" loading="lazy">
           <div class="p-overlay">
             <a href="https://canva.link/w2ah28f1c10u2l5" class="p-overlay-btn" target="_blank">Lihat Marketing Kit</a>
           </div>
         </div>
         <div class="p-info">
-          <div class="p-cat">Desain Grafis</div>
+          <div class="p-cat">Marketing Kit</div>
           <div class="p-title">RSU Bina Sehat – Marketing Kit</div>
           <div class="p-desc">Marketing kit rumah sakit — notebook cover, standarisasi visual brand, dan materi promosi.</div>
         </div>
@@ -686,7 +687,7 @@
       <!-- ══ DESAIN GRAFIS 2: Canva & Prompt Design Portfolio ══ -->
       <div class="p-card reveal" data-cat="Desain Grafis">
         <div class="p-thumb">
-          <img src="images/desain-portfolio-canva.png" alt="Canva & Prompt Design Portfolio" loading="lazy">
+          <img src="desain-portfolio-canva.png" alt="Canva & Prompt Design Portfolio" loading="lazy">
           <div class="p-overlay">
             <a href="https://canva.link/4s9fha7wsf1m31t" class="p-overlay-btn" target="_blank">Lihat Portfolio Desain</a>
           </div>
@@ -879,7 +880,8 @@
       // Show/hide YouTube CTA button
       const ytCta = document.getElementById('yt-cta');
       if (ytCta) {
-        ytCta.style.display = (filter === 'all' || filter === 'Video Editing') ? 'block' : 'none';
+        const showYt = filter === 'all' || filter === 'Video Editing';
+        ytCta.style.display = showYt ? 'block' : 'none';
       }
 
       document.querySelectorAll('.p-card').forEach(card => {
