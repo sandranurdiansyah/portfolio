@@ -496,10 +496,7 @@
           <!-- ✏️ EDIT: Ganti src dengan path foto profilmu -->
           <!-- Contoh: src="images/foto-profil.jpg" -->
           <!-- Upload foto ke folder images/ di GitHub repo -->
-          <div class="portrait-placeholder">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
-            <span>Upload foto ke images/foto-profil.jpg<br>lalu ganti tag ini dengan &lt;img src="images/foto-profil.jpg"&gt;</span>
-          </div>
+          <img src="images/foto-profil" alt="Sandra Nurdiansyah — Marketing Engineer" loading="eager" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
 
           <!-- Cert badge overlay -->
           <div class="cert-badge">
@@ -671,6 +668,36 @@
         </div>
       </div>
 
+      <!-- ══ DESAIN GRAFIS 1: RSU Bina Sehat Visual Guideline ══ -->
+      <div class="p-card reveal" data-cat="Desain Grafis">
+        <div class="p-thumb">
+          <img src="images/desain-rsu-binasehat.png" alt="RSU Bina Sehat – Marketing Kit" loading="lazy">
+          <div class="p-overlay">
+            <a href="https://canva.link/w2ah28f1c10u2l5" class="p-overlay-btn" target="_blank">Lihat Marketing Kit</a>
+          </div>
+        </div>
+        <div class="p-info">
+          <div class="p-cat">Desain Grafis</div>
+          <div class="p-title">RSU Bina Sehat – Marketing Kit</div>
+          <div class="p-desc">Marketing kit rumah sakit — notebook cover, standarisasi visual brand, dan materi promosi.</div>
+        </div>
+      </div>
+
+      <!-- ══ DESAIN GRAFIS 2: Canva & Prompt Design Portfolio ══ -->
+      <div class="p-card reveal" data-cat="Desain Grafis">
+        <div class="p-thumb">
+          <img src="images/desain-portfolio-canva.png" alt="Canva & Prompt Design Portfolio" loading="lazy">
+          <div class="p-overlay">
+            <a href="https://canva.link/4s9fha7wsf1m31t" class="p-overlay-btn" target="_blank">Lihat Portfolio Desain</a>
+          </div>
+        </div>
+        <div class="p-info">
+          <div class="p-cat">Desain Grafis</div>
+          <div class="p-title">Canva & Prompt Design Portfolio</div>
+          <div class="p-desc">Koleksi karya desain grafis — konten sosmed, poster promosi, dan AI prompt design untuk berbagai klien.</div>
+        </div>
+      </div>
+
       <!-- ══════════════════════════════════════════════════
            TAMBAH ITEM BARU: Copy salah satu block di atas
            dan paste di sini, lalu edit isinya
@@ -678,7 +705,7 @@
 
     </div><!-- end p-grid -->
 
-    <div class="reveal" style="text-align:center;margin-top:2.5rem;">
+    <div id="yt-cta" class="reveal" style="text-align:center;margin-top:2.5rem;">
       <a href="https://www.youtube.com/sandradewa" class="btn-s" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.625rem;">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="#FF0000"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
         Cek Portfolio Lainnya di YouTube →
@@ -848,6 +875,13 @@
       document.querySelectorAll('.f-tab').forEach(t => t.classList.remove('active'));
       tab.classList.add('active');
       const filter = tab.dataset.filter;
+
+      // Show/hide YouTube CTA button
+      const ytCta = document.getElementById('yt-cta');
+      if (ytCta) {
+        ytCta.style.display = (filter === 'all' || filter === 'Video Editing') ? 'block' : 'none';
+      }
+
       document.querySelectorAll('.p-card').forEach(card => {
         const show = filter === 'all' || card.dataset.cat === filter;
         card.style.transition = 'opacity .3s, transform .3s';
