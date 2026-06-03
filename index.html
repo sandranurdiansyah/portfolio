@@ -376,7 +376,16 @@
     .hamburger { display: flex; }
     .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
     .hero-right { order: -1; max-width: 320px; margin: 0 auto; }
-    .float-chip { display: none; }
+    .float-chip-1, .float-chip-2 { display: none; }
+    .float-chip-3 { display: none; }
+    .hero-chips-mobile {
+      display: flex; gap: .5rem; flex-wrap: wrap; justify-content: center;
+      margin-top: 1rem;
+    }
+    .hero-chips-mobile .float-chip {
+      position: static; animation: none;
+      display: inline-flex;
+    }
     .hero-left { text-align: center; }
     .hero-stats { justify-content: center; }
     .hero-btns { justify-content: center; }
@@ -479,9 +488,9 @@
       <!-- Kanan: Foto profil -->
       <div class="hero-right">
         <!-- Floating chips -->
-        <div class="float-chip float-chip-1"><span class="cdot"></span>Vibe Coding</div>
-        <div class="float-chip float-chip-2"><span class="cdot"></span>Meta Ads</div>
-        <div class="float-chip float-chip-3"><span class="cdot"></span>Respon AI</div>
+        <div class="float-chip float-chip-1"><span class="cdot"></span>Marketing</div>
+        <div class="float-chip float-chip-2"><span class="cdot"></span>Engineer</div>
+        <div class="float-chip float-chip-3"><span class="cdot"></span>Creative</div>
 
         <div class="portrait-card">
           <!-- ✏️ EDIT: Ganti src dengan path foto profilmu -->
@@ -502,6 +511,13 @@
               <div class="cert-sub">MTF Institute & Udemy</div>
             </div>
           </div>
+        </div>
+
+        <!-- Chips versi mobile -->
+        <div class="hero-chips-mobile">
+          <div class="float-chip"><span class="cdot"></span>Marketing</div>
+          <div class="float-chip"><span class="cdot"></span>Engineer</div>
+          <div class="float-chip"><span class="cdot"></span>Creative</div>
         </div>
       </div>
 
@@ -661,6 +677,14 @@
            ══════════════════════════════════════════════════ -->
 
     </div><!-- end p-grid -->
+
+    <div class="reveal" style="text-align:center;margin-top:2.5rem;">
+      <a href="https://www.youtube.com/sandradewa" class="btn-s" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.625rem;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#FF0000"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        Cek Portfolio Lainnya di YouTube →
+      </a>
+    </div>
+
   </div>
 </section>
 <!-- ✏️ ══ END PORTFOLIO AREA ═════════════════════════════ -->
